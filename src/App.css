@@ -1,12 +1,25 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+body {
+  font-family: 'Chilanka', cursive !important;
+  background-image: url('./images/back.jpeg') !important;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn { 
+  border: 1px solid gainsboro !important;
+  border-radius: 50px !important; 
+  margin-left: 10px;
+}
+.btn-done:hover {
+   background-color: green;
+   color: #fff !important;
 }
 
+.btn-delete:hover {
+   background-color: red;
+   color: #fff !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
