@@ -25,13 +25,15 @@ function App () {
          {
            id: Date.now(),
            title: todoTitle,
-           completed: false
+           completed: false,
+           
          }
 
        ])
        setTodoTitle('')
     }
   }
+
 
     return (
       <div className="container" >

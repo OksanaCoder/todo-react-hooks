@@ -20,12 +20,8 @@ export default function TodoItem({item, setTodos}) {
  const [completed, setCompleted] = useState(false)
 //  console.log(completed)
 
-//  const removeTodo = (id) => {[
-//      ...item,
-//      setTodos(item.filter((todo) => todo.id != id ))
-//  ]
-//  }
-
+ const removeTodo = (id) =>  {   setTodos(item.filter((todo) => todo.id != id )) }
+ 
  useEffect(() => {
      console.log('rendered')
  })
@@ -46,7 +42,7 @@ export default function TodoItem({item, setTodos}) {
          
             <button className='btn btn-delete'><FontAwesomeIcon style={{color: 'brown'}} 
                                                                 icon={faTrash}
-                                                                // onClick={removeTodo}
+                                                                onClick={() => removeTodo(item.id)}
                                                                 /></button>
          </div>
         </div>
