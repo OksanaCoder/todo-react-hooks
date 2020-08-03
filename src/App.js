@@ -34,6 +34,12 @@ function App () {
     }
   }
 
+   const removeTodo = (id) =>  { 
+     setTodos([
+          ...todos,
+         todos.filter((todo) => todo.id != id )
+      ])
+   }
 
     return (
       <div className="container" >
@@ -56,7 +62,7 @@ function App () {
               </Col>
             </Row>
             <Row>
-            <TodoList todos={todos} />
+            <TodoList todos={todos} removeTodo={removeTodo}/>
           </Row>
   
       </div>

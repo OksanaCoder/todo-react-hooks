@@ -15,13 +15,11 @@ const positionLi = {
     background: '#fff'
 }
 
-export default function TodoItem({item, setTodos}) {
+export default function TodoItem({item, removeTodo}) {
 
  const [completed, setCompleted] = useState(false)
 //  console.log(completed)
 
- const removeTodo = (id) =>  {   setTodos(item.filter((todo) => todo.id != id )) }
- 
  useEffect(() => {
      console.log('rendered')
  })
@@ -33,18 +31,24 @@ export default function TodoItem({item, setTodos}) {
           <div style={{display:'flex', alignItems: 'center'}}>
              
             <button className='btn btn-done'>
-                { !completed ?  <FontAwesomeIcon style={{color: 'brown'}} 
-                                 icon={faCheckCircle} 
-                                 onClick={() => setCompleted(!completed)}/> :
+                { !completed ?  
+                <div    onClick={() => setCompleted(!completed)}>
+                   <FontAwesomeIcon style={{color: 'brown'}} 
+                                    icon={faCheckCircle}
+                                /> 
+                </div>  
+                :
                                  null }
                
             </button>
          
             <button className='btn btn-delete'><FontAwesomeIcon style={{color: 'brown'}} 
                                                                 icon={faTrash}
-                                                                onClick={() => removeTodo(item.id)}
+                                                                onClick={() => this.props.removeTodo(item.id)}
                                                                 /></button>
          </div>
+
+       
         </div>
         </>
     )
