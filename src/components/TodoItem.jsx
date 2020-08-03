@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLinesVertical, faTrash, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
@@ -15,21 +15,39 @@ const positionLi = {
     background: '#fff'
 }
 
-export default function TodoItem({item}) {
+export default function TodoItem({item, setTodos}) {
 
- const [chcked, setChecked] = useState()
+ const [completed, setCompleted] = useState(false)
+//  console.log(completed)
+
+//  const removeTodo = (id) => {[
+//      ...item,
+//      setTodos(item.filter((todo) => todo.id != id ))
+//  ]
+//  }
+
+ useEffect(() => {
+     console.log('rendered')
+ })
     return( 
         <>
         <div style={positionLi}>
        
-            <li className='item-to-do' style={{textDecoration: item.completed ? 'line-through' : ''}}><FontAwesomeIcon className='mr-2' style={{color: 'brown'}} icon={faGripLinesVertical} /> {item.title}</li>
-          <div style={{display:'flex', alignItems: 'center'}}>  
+            <li className='item-to-do' style={{textDecoration: completed ? 'line-through' : ''}}><FontAwesomeIcon className='mr-2' style={{color: 'brown'}} icon={faGripLinesVertical} /> {item.title}</li>
+          <div style={{display:'flex', alignItems: 'center'}}>
+             
             <button className='btn btn-done'>
-                <FontAwesomeIcon style={{color: 'brown'}} 
+                { !completed ?  <FontAwesomeIcon style={{color: 'brown'}} 
                                  icon={faCheckCircle} 
-                                  />
+                                 onClick={() => setCompleted(!completed)}/> :
+                                 null }
+               
             </button>
-            <button className='btn btn-delete'><FontAwesomeIcon style={{color: 'brown'}} icon={faTrash} /></button>
+         
+            <button className='btn btn-delete'><FontAwesomeIcon style={{color: 'brown'}} 
+                                                                icon={faTrash}
+                                                                // onClick={removeTodo}
+                                                                /></button>
          </div>
         </div>
         </>
