@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import TodoItem from './TodoItem'
-export default function TodoList({todos, removeTodo}) {
-    const remove = () => {
-        this.props.removeTodo()
-    }
+export default function TodoList({todos, onRemove}) {
+  
     return (
         <Container style={{marginTop: '10px'}}>
             <Row>
@@ -12,7 +10,7 @@ export default function TodoList({todos, removeTodo}) {
                     <ul className='list-unstyled' style={{width: '50%', margin: '0 auto'}}>
                         {todos.map( item => {
                             return (
-                              <TodoItem key={item.id} item={item} onClick={{remove}}/>
+                              <TodoItem key={item.id} item={item} onRemove={onRemove}/>
                          
                             )
                         })}

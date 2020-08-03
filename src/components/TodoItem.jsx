@@ -15,7 +15,7 @@ const positionLi = {
     background: '#fff'
 }
 
-export default function TodoItem({item, remove}) {
+export default function TodoItem({item, onRemove}) {
 
  const [completed, setCompleted] = useState(false)
 //  console.log(completed)
@@ -44,7 +44,7 @@ export default function TodoItem({item, remove}) {
          
             <button className='btn btn-delete'><FontAwesomeIcon style={{color: 'brown'}} 
                                                                 icon={faTrash}
-                                                                onClick={() => this.props.remove(item.id)}
+                                                                onClick={() => onRemove(item.id)}
                                                                 /></button>
          </div>
 

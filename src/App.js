@@ -35,13 +35,17 @@ function App () {
   }
 
    const removeTodo = (id) =>  { 
-     setTodos([
-          ...todos,
-         todos.filter((todo) => todo.id != id )
-      ])
+    //  setTodos([
+    //       ...todos,
+    //      todos.filter((todo) => todo.id != id )
+    //   ])
+    const newList =  todos.filter((todo) => todo.id != id )
+    setTodos(newList)
    }
 
+  // let removedId;
     return (
+
       <div className="container" >
           
             <Row>
@@ -62,7 +66,7 @@ function App () {
               </Col>
             </Row>
             <Row>
-            <TodoList todos={todos} removeTodo={removeTodo}/>
+            <TodoList todos={todos} onRemove={removeTodo}/>
           </Row>
   
       </div>
