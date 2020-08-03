@@ -5,20 +5,56 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.input-field {
+  border: none;
+  background: transparent;
+  width: 100%;
 
+}
+/*
+.btn-add {
+  background: transparent;
+  border: none;
+  padding-bottom: 10px;
+} */
+
+.input-field:focus {
+  outline: none;
+  
+}
+
+/* .todoItem {
+  display: 'flex';
+  justify-content: 'space-between';
+  border: '1px solid grey';
+  padding: '10px 20px';
+  margin-bottom: '10px';
+  border-radius: '5px';
+  align-items: 'center';
+  background: '#fff';
+} */
+.cross-line {
+  text-decoration: line-through;
+}
 .btn { 
   border: 1px solid gainsboro !important;
   border-radius: 50px !important; 
   margin-left: 10px;
 }
-.btn-done:hover {
-   background-color: green;
-   color: #fff !important;
+.btn:focus {
+  outline: none !important;
+}
+.btn-done {
+  background-color: white !important;
+  border: none !important;
+}
+.todoItem:hover {
+    background-color: rgb(231, 169, 53);
 }
 
-.btn-delete:hover {
-   background-color: red;
-   color: #fff !important;
+.btn-delete {
+   background-color: white !important;
+   border: none !important;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -9,7 +9,7 @@ export default function TodoList({todos}) {
                     <ul className='list-unstyled' style={{width: '50%', margin: '0 auto'}}>
                         {todos.map( item => {
                             return (
-                              <TodoItem item={item}/>
+                              <TodoItem key={item.id} item={item}/>
                             )
                         })}
                     </ul>
