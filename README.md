@@ -1,4 +1,5 @@
- [todo-react app](https://oksanacoder.github.io/todo-react-hooks/).
+[Todo-React App](https://oksanacoder.github.io/todo-react-hooks/)
+
 Used tools:
 - React-Redux
 - React Hooks
