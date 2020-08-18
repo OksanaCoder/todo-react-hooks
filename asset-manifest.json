@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/todo-react-hooks/static/css/main.933c697f.chunk.css",
+    "main.js": "/todo-react-hooks/static/js/main.ba3426cc.chunk.js",
+    "main.js.map": "/todo-react-hooks/static/js/main.ba3426cc.chunk.js.map",
+    "runtime-main.js": "/todo-react-hooks/static/js/runtime-main.924fdcdc.js",
+    "runtime-main.js.map": "/todo-react-hooks/static/js/runtime-main.924fdcdc.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/todo-react-hooks/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.bae2a6b4.chunk.js": "/todo-react-hooks/static/js/2.bae2a6b4.chunk.js",
+    "static/js/2.bae2a6b4.chunk.js.map": "/todo-react-hooks/static/js/2.bae2a6b4.chunk.js.map",
+    "index.html": "/todo-react-hooks/index.html",
+    "precache-manifest.b4b037daac6adb39645bb9840fea10fc.js": "/todo-react-hooks/precache-manifest.b4b037daac6adb39645bb9840fea10fc.js",
+    "service-worker.js": "/todo-react-hooks/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/todo-react-hooks/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.933c697f.chunk.css.map": "/todo-react-hooks/static/css/main.933c697f.chunk.css.map",
+    "static/js/2.bae2a6b4.chunk.js.LICENSE.txt": "/todo-react-hooks/static/js/2.bae2a6b4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/todo-react-hooks/static/media/back.9b14649d.jpeg",
+    "static/media/logo.svg": "/todo-react-hooks/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.924fdcdc.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.bae2a6b4.chunk.js",
+    "static/css/main.933c697f.chunk.css",
+    "static/js/main.ba3426cc.chunk.js"
+  ]
+}
